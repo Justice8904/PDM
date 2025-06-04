@@ -1,21 +1,31 @@
 <script>
-	import { clear } from "console";
+    let display = $state('')
+    let c = $state('')
 
-    let num1 = $state()
-    let num2 = $state()
-    let res = $state()
-    let currentOperation = $state("")
-
-    function eq(){
+    function backSpace(){
+        display = display.slice(0,-1)
         
+    }
+
+    function press(c){
+        display+=c
+    }
+
+    function equals(){
+        display = eval(display)
+    }
+
+    function clear(){
+        display=""
     }
 </script>
 <div class="text-center">
-    <input class="form-control-lg w-100 mt-3" type="number" readonly />
+    <input class="form-control-lg w-100 mt-3" readonly  bind:value={display}/>
     <table class="table table-borderless table-sm">
         <tbody>
             <tr>
                 <td><button type="button" class="btn btn-outline-danger w-100" onclick={() => clear()}>C</button></td>
+                <td><button type="button" class="btn btn-outline-secondary w-100" onclick={() => backSpace()}>Ce</button></td>
                 <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => press("(")}>&lpar;</button></td>
                 <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => press(")")}>&rpar;</button></td>
                 <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => press("/")}>/</button></td>
@@ -41,7 +51,7 @@
             <tr>
                 <td><button type="button" class="btn btn-outline-dark w-100" onclick={() => press(0)}>0</button></td>
                 <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => press(".")}>&sdot;</button></td>
-                <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => eq()}>&equals;</button></td>
+                <td><button type="button" class="btn btn-outline-warning w-100" onclick={() => equals()}>&equals;</button></td>
                 <td></td>
             </tr>
         </tbody>
