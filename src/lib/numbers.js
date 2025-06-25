@@ -1,0 +1,32 @@
+export const numbers = new Map([
+    [0, 
+        "https://cdn.imgchest.com/files/yvdcw6onvry.png"
+      ],
+    [1, 
+        "https://cdn.imgchest.com/files/4jdcvb96nj4.png"
+      ],
+    [2, 
+        "https://cdn.imgchest.com/files/y2pck6r5zr7.png"
+      ],
+    [3, 
+        "https://cdn.imgchest.com/files/7ogcbvnx55y.png"
+      ],
+    [4, 
+        "https://cdn.imgchest.com/files/7pjcq6ok597.png"
+      ],
+    [5, 
+        "https://cdn.imgchest.com/files/7lxcp62xn67.png"
+      ],
+    [6, 
+        "https://cdn.imgchest.com/files/7bwckbo2xv7.png"
+      ],
+    [7, 
+        "https://cdn.imgchest.com/files/4nec85vlkb4.png"
+      ],
+    [8, 
+        "https://cdn.imgchest.com/files/49zc2zovwgy.png"
+      ],
+    [9, 
+        "https://cdn.imgchest.com/files/yxkcz2oqrx7.png"
+      ],
+])
